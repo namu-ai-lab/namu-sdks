@@ -12,7 +12,7 @@ Both have the same methods as the one-file clients in the developer docs (`speec
 `converse`, `usage`, `voices`, `models`), so code written against those clients only needs the install line changed.
 On top: one error class per status, typed responses, retries with jitter, `NAMU_BASE_URL`, and a test suite.
 
-**Status:** name, licence and repository decided (8 November 2026); publishing waits on the owner's PyPI and npm accounts (see Publish).
+**Status:** Python `namu-ai` 0.1.0 is [on PyPI](https://pypi.org/project/namu-ai/) (8 November 2026, published by `release.yml` with trusted publishing). The npm package waits on its first publish (see Publish: the npm account needs two-factor authentication).
 
 ## Checked
 
@@ -33,7 +33,8 @@ Decided on 8 November 2026: the name `namu-ai` on both registries, Apache 2.0, t
 `python-v0.1.0` publishes the package from GitHub Actions, with no token stored anywhere.
 
 **npm (the first version by hand):** npm can only trust a workflow for a package that already exists, so the first
-version is published from a terminal: `cd typescript && npm login && npm publish --access public`. Afterwards, on
+version is published from a terminal: `cd typescript && npm login && npm publish --access public`. npm refuses to
+publish from an account without two-factor authentication: turn it on first (npmjs.com → Account → Two-Factor Authentication). Afterwards, on
 npmjs.com, the package's Settings → Trusted publishing → GitHub Actions: `namu-ai-lab` / `namu-sdks` / `release.yml` /
 environment `npm`; later versions then publish on the tag `js-vX.Y.Z`.
 
