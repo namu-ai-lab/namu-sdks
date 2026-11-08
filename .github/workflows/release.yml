@@ -47,9 +47,11 @@ jobs:
         with:
           node-version: 22
           registry-url: https://registry.npmjs.org
+      - run: npm install -g npm@11   # trusted publishing (OIDC) needs npm 11.5 or later
       - run: npm ci && npm test
       - name: The tag matches the package version
         run: test "js-v$(node -p 'require("./package.json").version')" = "${GITHUB_REF_NAME}"
+      # With a trusted publisher set on npmjs.com, npm signs in through GitHub's OIDC token; NPM_TOKEN is only a fallback.
       - run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
