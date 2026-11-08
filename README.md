@@ -12,7 +12,7 @@ Both have the same methods as the one-file clients in the developer docs (`speec
 `converse`, `usage`, `voices`, `models`), so code written against those clients only needs the install line changed.
 On top: one error class per status, typed responses, retries with jitter, `NAMU_BASE_URL`, and a test suite.
 
-**Status:** Python `namu-ai` 0.1.0 is [on PyPI](https://pypi.org/project/namu-ai/) (8 November 2026, published by `release.yml` with trusted publishing). The npm package waits on its first publish (see Publish: the npm account needs two-factor authentication).
+**Status:** published on 8 November 2026: [`namu-ai` on PyPI](https://pypi.org/project/namu-ai/) (by `release.yml`, trusted publishing) and [`namu-ai` on npm](https://www.npmjs.com/package/namu-ai) (0.1.0 published by hand, as npm requires for a package's first version).
 
 ## Checked
 
