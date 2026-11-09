@@ -6,7 +6,7 @@ Agent map, not a manual. Truth order: the Namu API's behaviour > the tests > the
 `python/` publishes `namu-ai` on PyPI (`from namu import Namu`); `typescript/` publishes `namu-ai` on npm. Same
 methods in both: `speech`, `transcribe`, `translate`, `converse`, `usage`, `voices`, `models`; one error class per
 status; retries for network errors, `429 rate_limited` and 502/503/504 (never `quota_exceeded`). For the API's
-contract, use the namu MCP server (namu-core plugin): `api_catalog` and `team_context("cloud")`.
+contract, use the namu MCP server (namu plugin): `/namu:cloud`, or the tools `api_catalog` and `team_context("cloud")`.
 
 ## Commands
 - Python: `cd python && pip install -e ".[dev]" && pytest`; live, free endpoints only: `NAMU_LIVE=1 pytest -m live`
