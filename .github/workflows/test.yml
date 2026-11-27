@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   python:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # ubuntu-latest became 26.04, which has no Python 3.9 (27 Nov 2026)
     strategy:
       matrix:
         python: ["3.9", "3.11", "3.13"]
@@ -27,7 +27,7 @@ jobs:
       - run: NAMU_LIVE=1 pytest -m live
 
   typescript:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04   # ubuntu-latest became 26.04, which has no Python 3.9 (27 Nov 2026)
     strategy:
       matrix:
         node: [18, 20, 22]
