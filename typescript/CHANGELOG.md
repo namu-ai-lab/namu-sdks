@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1 (27 November 2026)
+
+The README's Data section now says only what Namu keeps: usage records, not your audio or text. No code changes.
+
 ## 0.1.0 (8 November 2026)
 
 First version: `Namu` with `speech`, `transcribe`, `translate`, `converse`, `usage`, `voices` and `models`; types for
