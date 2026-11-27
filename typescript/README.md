@@ -94,9 +94,7 @@ const namu = new Namu({ timeoutMs: 120_000, maxRetries: 5 });
 
 ## Data
 
-Speech to text and text to speech run on Namu's own models. Translation and the voice agent's replies are written by
-Google Gemini through OpenRouter, which receives the text they work on. Namu keeps usage records, not your audio or
-text.
+Namu keeps usage records, not your audio or text.
 
 ## Development
 
